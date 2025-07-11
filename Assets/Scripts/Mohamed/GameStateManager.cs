@@ -4,6 +4,7 @@ public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager Instance { get; private set; }
     private GameState _currentState;
+    [SerializeField]
     private StateID _currentID;
     private int _playerIndex;
     private const int MaxPlayers = 4;
@@ -26,6 +27,13 @@ public class GameStateManager : MonoBehaviour
 
     public void SwitchState(StateID newID)
     {
+        // Allow manual state switching from the Inspector in Editor
+#if UNITY_EDITOR
+        if (_currentID != newID)
+        {
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+#endif
         if (_currentState != null && _currentID == newID) return;
 
         _currentState?.OnExit();

@@ -8,5 +8,3 @@ public enum StateID
     ConditionCheck,
     UpdateGame
 }
-
-
