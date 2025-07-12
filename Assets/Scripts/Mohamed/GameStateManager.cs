@@ -4,10 +4,15 @@ public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager Instance { get; private set; }
     private GameState _currentState;
+    private StateID _lastStateID;
     [SerializeField]
     private StateID _currentID;
-    private int _playerIndex;
+    public int _playerIndex;
     private const int MaxPlayers = 4;
+
+    [Header("Game States")]
+    [SerializeField] EventTriggeringPhase eventTriggeringPhase;
+    [SerializeField] PassingPhonePhase passingPhonePhase;
 
     void Awake()
     {
@@ -23,6 +28,13 @@ public class GameStateManager : MonoBehaviour
     void Update()
     {
         _currentState?.OnUpdate();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // Example of switching state manually for testing
+            UpdateLastState(StateID.EventTrigger);
+            SwitchState(StateID.PassPhone);
+        }
     }
 
     public void SwitchState(StateID newID)
@@ -49,9 +61,9 @@ public class GameStateManager : MonoBehaviour
         return id switch
         {
             StateID.Start => new StartPhase(),
-            StateID.PassPhone => new PassPhonePhase(_playerIndex),
+            StateID.PassPhone => new PassPhonePhase(_playerIndex, passingPhonePhase),
             StateID.Bargaining => new BargainingPhase(_playerIndex),
-            StateID.EventTrigger => new EventTriggerPhase(),
+            StateID.EventTrigger => new EventTriggerPhase(_playerIndex, eventTriggeringPhase),
             StateID.Negotiation => new NegotiationPhase(),
             StateID.ConditionCheck => new ConditionCheckPhase(_playerIndex),
             StateID.UpdateGame => new UpdateGamePhase(),
@@ -59,11 +71,23 @@ public class GameStateManager : MonoBehaviour
         };
     }
 
+    public void UpdateLastState (StateID newID)
+    {
+        _lastStateID = newID;
+    }
+
+    public StateID GetLastStateID()
+    {
+        return _lastStateID;
+    }
+
     public void NextPlayer()
     {
-        _playerIndex = (_playerIndex + 1) % MaxPlayers;
+        _playerIndex ++;
         SwitchState(StateID.PassPhone);
     }
+
+    public int GetMaxPlayers() => MaxPlayers;
 
     public int GetCurrentPlayerIndex() => _playerIndex;
     public StateID GetCurrentStateID() => _currentID;
