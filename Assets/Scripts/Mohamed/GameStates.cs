@@ -19,15 +19,24 @@ public class StartPhase : GameState{
 
 public class PassPhonePhase : GameState {
     private int playerIndex;
+    private PassingPhonePhase passingPhonePhase;
 
-    public PassPhonePhase(int playerIndex)
+    public PassPhonePhase(int playerIndex, PassingPhonePhase passingPhonePhase)
     {
         this.playerIndex = playerIndex;
+        this.passingPhonePhase = passingPhonePhase;
     }
 
-    public override void OnEnter() => Debug.Log("Entering Pass Phone Phase");
-    public override void OnUpdate() => Debug.Log("Updating Pass Phone Phase");
-    public override void OnExit() => Debug.Log("Exiting Pass Phone Phase");
+    public override void OnEnter()
+    {
+        passingPhonePhase.Init(playerIndex);
+        passingPhonePhase.OnEnter();
+    }
+    public override void OnUpdate() { }
+    public override void OnExit()
+    {
+        passingPhonePhase.OnExit();
+    }
 }
 
 public class BargainingPhase : GameState {
@@ -44,9 +53,19 @@ public class BargainingPhase : GameState {
 }
 
 public class EventTriggerPhase : GameState {
-    public override void OnEnter() => Debug.Log("Entering Event Trigger Phase");
-    public override void OnUpdate() => Debug.Log("Updating Event Trigger Phase");
-    public override void OnExit() => Debug.Log("Exiting Event Trigger Phase");
+    private int playerIndex;
+    private EventTriggeringPhase currentPhase;
+    public EventTriggerPhase(int playerIndex, EventTriggeringPhase currentPhase)
+    {
+        this.playerIndex = playerIndex;
+        this.currentPhase = currentPhase;
+    }
+    public override void OnEnter() {
+        currentPhase.Init(playerIndex);
+        currentPhase.OnEnter();
+    }
+    public override void OnUpdate() => currentPhase.OnUpdate();
+    public override void OnExit() => currentPhase.OnExit();
 }
 
 public class NegotiationPhase : GameState {
