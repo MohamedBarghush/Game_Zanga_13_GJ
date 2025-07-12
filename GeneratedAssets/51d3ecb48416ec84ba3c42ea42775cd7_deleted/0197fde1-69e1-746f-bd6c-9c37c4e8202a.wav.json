@@ -1,0 +1,13 @@
+{
+    "asset": "51d3ecb48416ec84ba3c42ea42775cd7",
+    "fileName": "0197fde1-69e1-746f-bd6c-9c37c4e8202a.wav",
+    "prompt": "Cartoonic Ouch Sound",
+    "negativePrompt": "",
+    "model": "0ee39b33-2893-4e0f-8c46-0e0bdd4eda85",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "cc7effbf472ed428d108135095139e48",
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false
+}

@@ -1,0 +1,10 @@
+{
+    "asset": "8d287b2dadc340e47b124e9af3da1d36",
+    "fileName": "0197fde0-45e9-7dde-bf7f-90d892627d99.pose.json",
+    "prompt": "A female climbing a wall",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 1221506631,
+    "w3CTraceId": "7cef13acdcb0749d8cafdb660f9bca3a"
+}

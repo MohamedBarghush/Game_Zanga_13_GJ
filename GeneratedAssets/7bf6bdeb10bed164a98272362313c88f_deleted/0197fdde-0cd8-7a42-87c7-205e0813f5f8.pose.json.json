@@ -1,0 +1,10 @@
+{
+    "asset": "7bf6bdeb10bed164a98272362313c88f",
+    "fileName": "0197fdde-0cd8-7a42-87c7-205e0813f5f8.pose.json",
+    "prompt": "A guy doing a backflip and then does 3 pushups",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 1097423424,
+    "w3CTraceId": "03f888333e60bbb38356cef4f651f8ad"
+}

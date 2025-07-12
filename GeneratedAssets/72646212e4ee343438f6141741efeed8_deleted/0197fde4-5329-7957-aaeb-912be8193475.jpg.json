@@ -1,0 +1,20 @@
+{
+    "asset": "72646212e4ee343438f6141741efeed8",
+    "fileName": "0197fde4-5329-7957-aaeb-912be8193475.jpg",
+    "prompt": "A card similar to Yu-Gi-Oh that will be represented as an event for doubling resources.",
+    "negativePrompt": "",
+    "model": "4dc55660-f3eb-42ba-93a4-6261d6b2b8ec",
+    "modelName": "Game UI",
+    "customSeed": -1,
+    "w3CTraceId": "b735e42cc917d1da6bc044b0c7c8ced1",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

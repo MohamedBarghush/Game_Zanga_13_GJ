@@ -1,0 +1,10 @@
+{
+    "asset": "8d287b2dadc340e47b124e9af3da1d36",
+    "fileName": "0197fddf-cc7c-78f9-9bad-74c002b9c324.pose.json",
+    "prompt": "A male that does 3 jumping-jacks",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 835202208,
+    "w3CTraceId": "94548002cee1df1ca1ff3afd3bf8cf75"
+}

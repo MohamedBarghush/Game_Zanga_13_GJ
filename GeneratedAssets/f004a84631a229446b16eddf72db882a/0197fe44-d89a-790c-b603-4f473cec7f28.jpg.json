@@ -1,0 +1,20 @@
+{
+    "asset": "f004a84631a229446b16eddf72db882a",
+    "fileName": "0197fe44-d89a-790c-b603-4f473cec7f28.jpg",
+    "prompt": "A single bronze coin ",
+    "negativePrompt": "",
+    "model": "4dc55660-f3eb-42ba-93a4-6261d6b2b8ec",
+    "modelName": "Game UI",
+    "customSeed": -1,
+    "w3CTraceId": "924fda98d63faced7725768e82bcd189",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}
