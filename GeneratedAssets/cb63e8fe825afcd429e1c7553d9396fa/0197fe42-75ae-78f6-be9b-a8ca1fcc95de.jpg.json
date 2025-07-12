@@ -1,0 +1,20 @@
+{
+    "asset": "cb63e8fe825afcd429e1c7553d9396fa",
+    "fileName": "0197fe42-75ae-78f6-be9b-a8ca1fcc95de.jpg",
+    "prompt": "A single Gold coin",
+    "negativePrompt": "",
+    "model": "4dc55660-f3eb-42ba-93a4-6261d6b2b8ec",
+    "modelName": "Game UI",
+    "customSeed": -1,
+    "w3CTraceId": "a35693c52de77464605422cb7f7d4f78",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

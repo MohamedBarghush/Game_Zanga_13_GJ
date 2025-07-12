@@ -13,7 +13,7 @@ public abstract class GameState
 
 public class StartPhase : GameState{
     public override void OnEnter() => Debug.Log("Entering Start Phase");
-    public override void OnUpdate() => Debug.Log("Updating Start Phase");
+    //public override void OnUpdate() => Consoe.Log("Updating Start Phase");
     public override void OnExit() => Debug.Log("Exiting Start Phase");
 }
 

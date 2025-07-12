@@ -1,0 +1,20 @@
+{
+    "asset": "c0c4cb0d37240d947b50462796ab1748",
+    "fileName": "0197fe2c-da7b-761e-91a1-81f30a0c0d96.jpg",
+    "prompt": "Strawberry Icon",
+    "negativePrompt": "",
+    "model": "4dc55660-f3eb-42ba-93a4-6261d6b2b8ec",
+    "modelName": "Game UI",
+    "customSeed": -1,
+    "w3CTraceId": "00976139c9e1988f46ddc56b07ceca28",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

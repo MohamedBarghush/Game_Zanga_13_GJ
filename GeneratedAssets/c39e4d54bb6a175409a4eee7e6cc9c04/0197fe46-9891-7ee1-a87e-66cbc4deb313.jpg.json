@@ -1,0 +1,20 @@
+{
+    "asset": "c39e4d54bb6a175409a4eee7e6cc9c04",
+    "fileName": "0197fe46-9891-7ee1-a87e-66cbc4deb313.jpg",
+    "prompt": "A single Diamond ",
+    "negativePrompt": "",
+    "model": "4dc55660-f3eb-42ba-93a4-6261d6b2b8ec",
+    "modelName": "Game UI",
+    "customSeed": -1,
+    "w3CTraceId": "b41af653c89d61593d859191f8e8dd26",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}
