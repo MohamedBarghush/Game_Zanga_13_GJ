@@ -14,6 +14,7 @@ public class NegoHandler : MonoBehaviour
     [SerializeField] private List<TMP_Text> dealers;
     [SerializeField] private List<TMP_Dropdown> dropdowns;
     [SerializeField] private List<Sprite> allSprites;
+    [SerializeField] private List<Button> allButtons;
 
     List<List<GameObject>> allPlayerData;
 
@@ -80,6 +81,8 @@ public class NegoHandler : MonoBehaviour
             Debug.LogWarning("Invalid player index.");
             return;
         }
+
+        allButtons[index].gameObject.SetActive(false);
 
         TMP_Dropdown dropdown = dropdowns[index];
         if (dropdown == null || dropdown.value == 0)
