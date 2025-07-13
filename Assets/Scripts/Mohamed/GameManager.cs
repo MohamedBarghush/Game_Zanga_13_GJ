@@ -42,7 +42,7 @@ public class PlayerData {
 }
 
 
-public enum Attributes { Fame, Charm, Money, Intelligence, Health }
+public enum Attributes { Fame, Money, Intelligence }
 
 public class GameManager : MonoBehaviour
 {
@@ -60,10 +60,10 @@ public class GameManager : MonoBehaviour
         Players = new PlayerData[4];
         for (int i = 0; i < Players.Length; i++)
             Players[i] = new PlayerData(
-                new int[] { 0, 60, 70, 30, 0 },
-                new int[] { 0, 80, 50, 0, 0 },
-                new int[] { 0, 0, 0, 0, 20 },
-                new int[] { 10, 0, -15, 0, 0 },
+                new int[] { 60, 70, 30 },
+                new int[] { 80, 80, 0 },
+                new int[] { 0, 0, 10 },
+                new int[] { 0, 0, 0 },
                 "tstFake" + i,
                 "tstReal" + i
             );

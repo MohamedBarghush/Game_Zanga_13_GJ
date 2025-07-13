@@ -8,7 +8,6 @@ public class EventTriggeringUI : MonoBehaviour
     [Header("UI Elements")]
     public GameObject eventTriggeringPanel;
     public GameObject playerPopup;
-    public TMP_Text playerPopupText;
     public GameObject cardPickSprite;
     public GameObject effectPanel;
     public TMP_Text effectDescriptionText;
@@ -76,7 +75,6 @@ public class EventTriggeringUI : MonoBehaviour
         // if (playerPopup == null || playerPopupText == null) return;
         Debug.Log($"Showing Special Effect Round");
         playerPopup.SetActive(true);
-        playerPopupText.text = $"Special Effect Shared Round!";
         playerPopup.transform.localScale = Vector3.zero;
         playerPopup.transform.DOScale(1f, 0.4f).SetEase(Ease.OutBack);
     }
@@ -153,6 +151,14 @@ public class EventTriggeringUI : MonoBehaviour
     {
         if (continueButton == null) return;
         continueButton.SetActive(true);
+        var canvasGroup = continueButton.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = continueButton.AddComponent<CanvasGroup>();
+        }
+        canvasGroup.alpha = 0f;
+        canvasGroup.DOFade(1f, 0.5f).SetEase(Ease.InOutQuad);
+
         var rect = continueButton.GetComponent<RectTransform>();
         if (rect != null)
         {

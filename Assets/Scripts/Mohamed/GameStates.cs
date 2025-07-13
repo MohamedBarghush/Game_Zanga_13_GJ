@@ -74,7 +74,13 @@ public class EventTriggerPhase : GameState {
 }
 
 public class NegotiationPhase : GameState {
-    public override void OnEnter() => Debug.Log("Entering Negotiation Phase");
+    private NegoHandler negotiationPhase;
+    public NegotiationPhase(NegoHandler negotiationPhase)
+    {
+        this.negotiationPhase = negotiationPhase;
+    }
+
+    public override void OnEnter() => negotiationPhase.OnEnter();
     public override void OnUpdate() => Debug.Log("Updating Negotiation Phase");
     public override void OnExit() => Debug.Log("Exiting Negotiation Phase");
 }
