@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -15,11 +15,17 @@ public class NegoHandler : MonoBehaviour
     [SerializeField] private List<TMP_Dropdown> dropdowns;
     [SerializeField] private List<Sprite> allSprites;
 
+    List<List<GameObject>> allPlayerData;
+
+    public static List<lockedBid> lockedBids;
+
     private void Start()
     {
+        lockedBids = new List<lockedBid>(); 
+
         gameManager = GameManager.Instance;
 
-        var allPlayerData = new List<List<GameObject>> { player1, player2, player3, player4 };
+        allPlayerData = new List<List<GameObject>> { player1, player2, player3, player4 };
         var playerNames = gameManager.Players.Select(p => p.playerName).ToList();
 
         for (int i = 0; i < gameManager.Players.Length; i++)
@@ -34,14 +40,17 @@ public class NegoHandler : MonoBehaviour
 
             if (dropdown != null)
             {
-                var otherNames = playerNames.Where((name, index) => index != i).ToList();
+                var otherNames = playerNames
+                    .Where((name, index) => index != i)
+                    .Prepend("No choice") 
+                    .ToList();
 
                 dropdown.ClearOptions();
                 dropdown.AddOptions(otherNames);
-            }
-            else
-            {
-                Debug.Log("AAAAA");
+                dropdown.value = 0; 
+
+                dropdown.ClearOptions();
+                dropdown.AddOptions(otherNames);
             }
 
             int totalCount = 0;
@@ -64,15 +73,46 @@ public class NegoHandler : MonoBehaviour
                 allPlayerData[i][j].SetActive(false);
         }
     }
+    public void OnButtonPress(int index)
+    {
+        if (index < 0 || index >= gameManager.Players.Length)
+        {
+            Debug.LogWarning("Invalid player index.");
+            return;
+        }
+
+        TMP_Dropdown dropdown = dropdowns[index];
+        if (dropdown == null || dropdown.value == 0)
+        {
+            Debug.Log("No choice selected for player " + index);
+            return;
+        }
+
+        string dealerName = gameManager.Players[index].playerName;
+        string receiverName = dropdown.options[dropdown.value].text;
+
+        Dictionary<Attributes, int> bidding = gameManager.Players[index].biddingAttbs;
+
+        foreach (var kvp in bidding)
+        {
+            if (kvp.Value != 0)
+            {
+                lockedBid newBid = new lockedBid(dealerName, receiverName, kvp.Value, kvp.Key);
+                Debug.Log($"Locked Bid → Dealer: {dealerName}, Receiver: {receiverName}, Attribute: {kvp.Key}, Value: {kvp.Value}");
+                lockedBids.Add(newBid);
+            }
+        }
+    }
+
 }
 
-class lockedBid
+public class lockedBid
 {
     string dealer { get; set; }
     string reciever {  get; set; }
     int value { get; set; }
     Attributes att { get; set; }
-    lockedBid(string dealer, string reciever, int value, Attributes att)
+    public lockedBid(string dealer, string reciever, int value, Attributes att)
     {
         this.dealer = dealer;
         this.reciever = reciever;
