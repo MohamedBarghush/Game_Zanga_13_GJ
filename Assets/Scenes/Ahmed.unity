@@ -2796,7 +2796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1325232762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2835,7 +2835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1387497188
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5154,6 +5154,11 @@ MonoBehaviour:
   rulesMenu: {fileID: 662962604}
   gameMenu: {fileID: 1325232761}
   thisMenu: {fileID: 1387497187}
+  entireCanvas: {fileID: 8733527037026925267}
+  publicNameTitle: {fileID: 2137642031}
+  privateNameTitle: {fileID: 416335800}
+  publicName: {fileID: 1753900198}
+  privateName: {fileID: 1115766844}
 --- !u!222 &6896578633990809575
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5324,8 +5329,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PhaseController, Assembly-CSharp
+      - m_Target: {fileID: 6795323206991518777}
+        m_TargetAssemblyTypeName: IntroHandler, Assembly-CSharp
         m_MethodName: OnNextPlayerPress
         m_Mode: 1
         m_Arguments:
