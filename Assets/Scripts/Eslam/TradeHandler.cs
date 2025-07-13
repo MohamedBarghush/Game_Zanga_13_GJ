@@ -15,6 +15,8 @@ public class TradeHandler : MonoBehaviour
     Dictionary<string, Dictionary<int, int>> playerValues;
     GameManager gameManager;
     PlayerData playerData;
+    private static int currentAttb;
+
     void Start()
     {
         playerValues = new Dictionary<string, Dictionary<int, int>>();
@@ -31,11 +33,9 @@ public class TradeHandler : MonoBehaviour
         
     }
 
-    int currentAttb = 0;
-
     public void OpenTradeUI(int attributeIndex, Sprite sprite)
     {
-        currentAttb = attributeIndex; 
+        currentAttb = attributeIndex;
         tradeParent.SetActive(true);
         target.sprite = sprite;
         parent.SetActive(false);

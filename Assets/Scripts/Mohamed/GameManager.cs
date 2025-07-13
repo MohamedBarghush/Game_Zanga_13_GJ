@@ -63,9 +63,9 @@ public class GameManager : MonoBehaviour
                 new int[] { 0, 60, 70, 30, 0 },
                 new int[] { 0, 80, 50, 0, 0 },
                 new int[] { 0, 0, 0, 0, 20 },
-                new int[] { 0, 0, 0, 0, 0 },
-                "tstFake",
-                "tstReal"
+                new int[] { 10, 0, -15, 0, 0 },
+                "tstFake" + i,
+                "tstReal" + i
             );
     }
 
