@@ -5,34 +5,29 @@ using System.Collections;
 
 public class EventTriggeringUI : MonoBehaviour
 {
-    // Assign these in the inspector
     [Header("UI Elements")]
     public GameObject eventTriggeringPanel;
     public GameObject playerPopup;
     public TMP_Text playerPopupText;
     public GameObject cardPickSprite;
-    public GameObject cardPanel;
-    public TMP_Text cardNameText;
-    public TMP_Text effect1Text;
-    public TMP_Text effect2Text;
-    public GameObject continueButton; // Reference to your button
+    public GameObject effectPanel;
+    public TMP_Text effectDescriptionText;
+    public TMP_Text effectPlayersText;
+    public GameObject continueButton;
 
-    // Reference to the logic (auto-assign from same GameObject)
     private EventTriggeringPhase phaseLogic;
     private void Awake()
     {
-        // Always get from same GameObject
         if (phaseLogic == null)
             phaseLogic = GetComponent<EventTriggeringPhase>();
         phaseLogic.OnEnterEvent += OnStart;
-
         phaseLogic.OnShowPlayerPopup += ShowPlayerPopup;
         phaseLogic.OnHidePlayerPopup += HidePlayerPopup;
         phaseLogic.OnShowCardPickSprite += ShowCardPickSprite;
         phaseLogic.OnHideCardPickSprite += HideCardPickSprite;
-        phaseLogic.OnShowCard += ShowCard;
-        phaseLogic.OnHideCard += HideCard;
-        phaseLogic.OnAnimateAttributeChange += AnimateAttributeChangeHandler;
+        phaseLogic.OnShowEffect += ShowEffect;
+        phaseLogic.OnHideCard += HideEffectPanel;
+        phaseLogic.OnAnimateAttributeChange += AnimateAttributeChangeAllPlayers;
         phaseLogic.OnPhaseEnd += HideAll;
     }
 
@@ -40,12 +35,11 @@ public class EventTriggeringUI : MonoBehaviour
     {
         Debug.Log("EventTriggeringUI: Starting phase");
         eventTriggeringPanel.SetActive(true);
-
         playerPopup.SetActive(false);
         cardPickSprite.SetActive(false);
-        cardPanel.SetActive(false);
-        effect1Text.gameObject.SetActive(false);
-        effect2Text.gameObject.SetActive(false);
+        if (effectPanel != null) effectPanel.SetActive(false);
+        if (effectDescriptionText != null) effectDescriptionText.text = "";
+        if (effectPlayersText != null) effectPlayersText.text = "";
     }
 
     private void OnExit()
@@ -55,25 +49,34 @@ public class EventTriggeringUI : MonoBehaviour
         phaseLogic.OnHidePlayerPopup -= HidePlayerPopup;
         phaseLogic.OnShowCardPickSprite -= ShowCardPickSprite;
         phaseLogic.OnHideCardPickSprite -= HideCardPickSprite;
-        phaseLogic.OnShowCard -= ShowCard;
-        phaseLogic.OnHideCard -= HideCard;
-        phaseLogic.OnAnimateAttributeChange -= AnimateAttributeChangeHandler;
+        phaseLogic.OnShowEffect -= ShowEffect;
+        phaseLogic.OnHideCard -= HideEffectPanel;
+        phaseLogic.OnAnimateAttributeChange -= AnimateAttributeChangeAllPlayers;
         phaseLogic.OnPhaseEnd -= HideAll;
     }
 
-    // Helper to start coroutine from event
-    private void AnimateAttributeChangeHandler(Attributes attb1, int old1, int new1, Attributes attb2, int old2, int new2)
+    // Show the effect description panel
+    private void ShowEffect(string effectDesc)
     {
-        StartCoroutine(AnimateAttributeChange(attb1, old1, new1, attb2, old2, new2));
+        if (effectPanel != null) effectPanel.SetActive(true);
+        if (effectDescriptionText != null) effectDescriptionText.text = effectDesc;
+        if (effectPlayersText != null) effectPlayersText.text = "";
+    }
+
+    private void HideEffectPanel()
+    {
+        if (effectPanel != null) effectPanel.SetActive(false);
+        if (effectDescriptionText != null) effectDescriptionText.text = "";
+        if (effectPlayersText != null) effectPlayersText.text = "";
     }
 
     // Show popup with player index
     public void ShowPlayerPopup(int playerIndex)
     {
         // if (playerPopup == null || playerPopupText == null) return;
-        Debug.Log($"Showing player popup for player {playerIndex + 1}");
+        Debug.Log($"Showing Special Effect Round");
         playerPopup.SetActive(true);
-        playerPopupText.text = $"Player {playerIndex + 1}'s Turn!";
+        playerPopupText.text = $"Special Effect Shared Round!";
         playerPopup.transform.localScale = Vector3.zero;
         playerPopup.transform.DOScale(1f, 0.4f).SetEase(Ease.OutBack);
     }
@@ -105,83 +108,38 @@ public class EventTriggeringUI : MonoBehaviour
         });
     }
 
-    // Show card with effects
-    public void ShowCard(EventTriggeringPhase.Card card)
+    // Animate attribute changes for all players
+    private void AnimateAttributeChangeAllPlayers(Attributes attr, int[] oldVals, int[] newVals)
     {
-        if (cardPanel == null || cardNameText == null || effect1Text == null || effect2Text == null) return;
-        cardPanel.SetActive(true);
-        cardPanel.transform.localScale = Vector3.zero;
-        cardPanel.transform.DOScale(1f, 0.4f).SetEase(Ease.OutBack);
-        cardNameText.text = card.name;
-        effect1Text.text = FormatEffectText(card.attb1, card.value1);
-        effect2Text.text = FormatEffectText(card.attb2, card.value2);
+        StartCoroutine(AnimateAllPlayersCoroutine(attr, oldVals, newVals));
     }
 
-    private string FormatEffectText(Attributes attb, int value)
+    private IEnumerator AnimateAllPlayersCoroutine(Attributes attr, int[] oldVals, int[] newVals)
     {
-        // Used for initial card display (no old value)
-        string arrow = value > 0 ? "<color=green>▲</color>" : value < 0 ? "<color=red>▼</color>" : "";
-        string sign = value > 0 ? "+" : value < 0 ? "-" : "";
-        return $"{attb}: {sign}{Mathf.Abs(value)} {arrow}";
-    }
-
-    // Overload for animation to show old and new values
-    private string FormatEffectText(Attributes attb, int newValue, int delta, int? oldValue = null)
-    {
-        string arrow = delta > 0 ? "<color=green>▲</color>" : delta < 0 ? "<color=red>▼</color>" : "";
-        string sign = delta > 0 ? "+" : delta < 0 ? "-" : "";
-        if (oldValue.HasValue)
-        {
-            // Example: Lust 10→15 +5 ▲
-            return $"{attb} {oldValue.Value}→{newValue} {sign}{Mathf.Abs(newValue - oldValue.Value)} {arrow}";
-        }
-        else
-        {
-            return $"{attb}: {sign}{Mathf.Abs(newValue)} {arrow}";
-        }
-    }
-
-    public void HideCard()
-    {
-        if (cardPanel == null) return;
-        cardPanel.transform.DOScale(0f, 0.3f).SetEase(Ease.InBack).OnComplete(() =>
-        {
-            cardPanel.SetActive(false);
-        });
-    }
-
-    // Animate attribute changes
-    public IEnumerator AnimateAttributeChange(Attributes attb1, int old1, int new1, Attributes attb2, int old2, int new2)
-    {
-        if (effect1Text == null || effect2Text == null) yield break;
-        int delta1 = new1 - old1;
-        int delta2 = new2 - old2;
-        effect1Text.text = FormatEffectText(attb1, old1, delta1, old1);
-        effect2Text.text = FormatEffectText(attb2, old2, delta2, old2);
-        effect1Text.gameObject.SetActive(true);
-        effect2Text.gameObject.SetActive(true);
-
+        if (effectPlayersText == null) yield break;
         float duration = 1.5f;
         float elapsed = 0f;
+        int playerCount = oldVals.Length;
+        string[] playerLines = new string[playerCount];
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / duration);
-            int val1 = Mathf.RoundToInt(Mathf.Lerp(old1, new1, t));
-            int val2 = Mathf.RoundToInt(Mathf.Lerp(old2, new2, t));
-            effect1Text.text = FormatEffectText(attb1, val1, delta1, old1);
-            effect2Text.text = FormatEffectText(attb2, val2, delta2, old2);
+            for (int i = 0; i < playerCount; i++)
+            {
+                int val = Mathf.RoundToInt(Mathf.Lerp(oldVals[i], newVals[i], t));
+                playerLines[i] = $"Player {i + 1}: {attr} {oldVals[i]}→{val}";
+            }
+            effectPlayersText.text = string.Join("\n", playerLines);
             yield return null;
         }
-        effect1Text.text = FormatEffectText(attb1, new1, delta1, old1);
-        effect2Text.text = FormatEffectText(attb2, new2, delta2, old2);
+        for (int i = 0; i < playerCount; i++)
+        {
+            playerLines[i] = $"Player {i + 1}: {attr} {oldVals[i]}→{newVals[i]}";
+        }
+        effectPlayersText.text = string.Join("\n", playerLines);
         yield return new WaitForSeconds(1.0f);
         ShowContinueButton();
-        // Optionally hide after animation
-        // effect1Text.gameObject.SetActive(false);
-        // effect2Text.gameObject.SetActive(false);
-
-
     }
 
     // Hide all UI elements
@@ -217,9 +175,7 @@ public class EventTriggeringUI : MonoBehaviour
         if (eventTriggeringPanel != null) eventTriggeringPanel.SetActive(false);
         if (playerPopup != null) playerPopup.SetActive(false);
         if (cardPickSprite != null) cardPickSprite.SetActive(false);
-        if (cardPanel != null) cardPanel.SetActive(false);
-        if (effect1Text != null) effect1Text.gameObject.SetActive(false);
-        if (effect2Text != null) effect2Text.gameObject.SetActive(false);
+        // Removed references to old card/effect fields (cardPanel, effect1Text, effect2Text)
         if (continueButton != null) continueButton.SetActive(false);
     }
 }

@@ -13,6 +13,7 @@ public class GameStateManager : MonoBehaviour
     [Header("Game States")]
     [SerializeField] EventTriggeringPhase eventTriggeringPhase;
     [SerializeField] PassingPhonePhase passingPhonePhase;
+    [SerializeField] BargainingPhaseController bargainingPhaseController;
 
     void Awake()
     {
@@ -29,10 +30,17 @@ public class GameStateManager : MonoBehaviour
     {
         _currentState?.OnUpdate();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             // Example of switching state manually for testing
             UpdateLastState(StateID.EventTrigger);
+            SwitchState(StateID.PassPhone);
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            // Example of switching state manually for testing
+            UpdateLastState(StateID.Bargaining);
             SwitchState(StateID.PassPhone);
         }
     }
@@ -62,7 +70,7 @@ public class GameStateManager : MonoBehaviour
         {
             StateID.Start => new StartPhase(),
             StateID.PassPhone => new PassPhonePhase(_playerIndex, passingPhonePhase),
-            StateID.Bargaining => new BargainingPhase(_playerIndex),
+            StateID.Bargaining => new BargainingPhase(_playerIndex, bargainingPhaseController),
             StateID.EventTrigger => new EventTriggerPhase(_playerIndex, eventTriggeringPhase),
             StateID.Negotiation => new NegotiationPhase(),
             StateID.ConditionCheck => new ConditionCheckPhase(_playerIndex),

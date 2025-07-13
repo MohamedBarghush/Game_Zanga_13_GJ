@@ -21,7 +21,8 @@ public class TradeHandler : MonoBehaviour
 
         gameManager = GameManager.Instance;
 
-        playerData = gameManager.Players[PlayerPrefs.GetInt("CurrentPlayer", 0)];
+        int playerIndex = GameStateManager.Instance.GetCurrentPlayerIndex();
+        playerData = gameManager.Players[playerIndex];
     }
 
     // Update is called once per frame
@@ -44,45 +45,29 @@ public class TradeHandler : MonoBehaviour
 
     public void onConfirmButtonPress()
     {
-
-        if (playerValues.Keys.Contains(playerData.playerName))
+        // Update the biddingAttbs for the current player in GameManager
+        int playerIndex = GameStateManager.Instance.GetCurrentPlayerIndex();
+        int value = int.Parse(valueText.text);
+        if (value != 0)
         {
-            Dictionary<int, int> keyValuePairs = playerValues[playerData.playerName];
-            if(keyValuePairs.Keys.Contains(currentAttb))
-            {
-                if(int.Parse(valueText.text) != 0)
-                {
-                    keyValuePairs[currentAttb] = int.Parse(valueText.text);
-                }
-                else
-                {
-                    keyValuePairs.Remove(currentAttb);
-                }
-            }
-            else
-            {
-                if (int.Parse(valueText.text) != 0)
-                {
-                    playerValues[playerData.playerName].Add(currentAttb, int.Parse(valueText.text));
-                }
-            }
+            // Set or update the bidding attribute for this player
+            gameManager.SetPlayerBiddingAttribute(playerIndex, (Attributes)currentAttb, value);
         }
         else
         {
-            if (int.Parse(valueText.text) != 0)
+            // Remove the bidding attribute if value is zero
+            var biddingAttbs = gameManager.Players[playerIndex].biddingAttbs;
+            if (biddingAttbs != null && biddingAttbs.ContainsKey((Attributes)currentAttb))
             {
-                playerValues.Add(playerData.playerName, new Dictionary<int, int>()
-            {
-                { currentAttb, int.Parse(valueText.text)}
-            }
-                );
+                biddingAttbs.Remove((Attributes)currentAttb);
             }
         }
 
+        // Optionally update UI or text fields here if you have a summary display
+        // For example, you could refresh a bidding summary UI here
+
         parent.SetActive(true);
-
         tradeParent.SetActive(false);
-
     }
 
     public void onAddButtonPress()

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PhaseController : MonoBehaviour
+public class BargainingPhaseController : MonoBehaviour
 {
     [Header("Attribute UI References")]
     [SerializeField] private List<Sprite> attributesSprites;
@@ -17,23 +17,39 @@ public class PhaseController : MonoBehaviour
     [Header("Player Info")]
     [SerializeField] private TMP_Text publicNameText;
     [SerializeField] private TMP_Text internalNameText;
-    [SerializeField] private GameObject blankImage;
+    [SerializeField] private GameObject entireCanvas;
 
-    private GameManager gameManager;
     private PlayerData playerData;
-    private int currentPlayer;
+    private int _playerIndex;
 
-    private void OnEnable()
+    public void Awake()
     {
-        currentPlayer = PlayerPrefs.GetInt("CurrentPlayer", 0);
+        if (entireCanvas != null)
+        {
+            DisableEverything();
+        }
     }
 
-    private void Start()
+    public void Init(int playerIndex)
     {
-        gameManager = GameManager.Instance;
-        playerData = gameManager.Players[currentPlayer];
+        _playerIndex = playerIndex;
+    }
 
+    public void OnPhaseEnter()
+    {
+        playerData = GameManager.Instance.GetPlayerData(_playerIndex);
+        EnableEverything();
         SetupPlayerUI();
+    }
+
+    private void EnableEverything()
+    {
+        entireCanvas.SetActive(true);
+    }
+
+    private void DisableEverything()
+    {
+        entireCanvas.SetActive(false);
     }
 
     private void SetupPlayerUI()
@@ -43,7 +59,7 @@ public class PhaseController : MonoBehaviour
 
         SetupAttributeSection(playerData.currentAttbs, currentAttbUI, true);
         SetupAttributeSection(playerData.requiredAttbs, requiredAttbUI);
-        SetupSinkingAttributes(playerData.sinkingAttbs);
+        SetupAttributeSection(playerData.sinkingAttbs, sinkingAttbUI);
     }
 
     private void SetupAttributeSection(Dictionary<Attributes, int> attributes, List<GameObject> uiElements, bool setupTradeButtons = false)
@@ -77,49 +93,18 @@ public class PhaseController : MonoBehaviour
         }
     }
 
-    private void SetupSinkingAttributes(Dictionary<Attributes, Tuple<int, char>> attributes)
-    {
-        int index = 0;
-
-        foreach (var kvp in attributes)
-        {
-            var (value, symbol) = kvp.Value;
-            int attrIndex = (int)kvp.Key;
-
-            if (value <= 0 || index >= sinkingAttbUI.Count)
-                continue;
-
-            GameObject uiObj = sinkingAttbUI[index];
-
-            var image = uiObj.GetComponentInChildren<Image>();
-            var label = uiObj.GetComponentInChildren<TMP_Text>();
-
-            if (image != null) image.sprite = attributesSprites[attrIndex];
-            if (label != null) label.text = $"{attributesNames[attrIndex]}{symbol}{value}";
-
-            index++;
-        }
-    }
-
     public void OnNextPlayerPress()
     {
-        if (currentPlayer <= 3)
-        {
-            PlayerPrefs.SetInt("CurrentPlayer", currentPlayer++);
-            blankImage.SetActive(true);
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            // TODO: Transition to Negotiation Phase
-        }
+        GameStateManager.Instance.UpdateLastState(StateID.Bargaining);
+        GameStateManager.Instance.NextPlayer();
+        DisableEverything();
     }
 
     public void OnTradeButtonClicked(int attributeIndex)
     {
         Debug.Log($"Trade Button for Attribute Index: {attributeIndex}");
 
-        TradeHandler tradeHandler = FindObjectOfType<TradeHandler>();
+        TradeHandler tradeHandler = FindAnyObjectByType<TradeHandler>();
         if (tradeHandler != null)
         {
             tradeHandler.OpenTradeUI(attributeIndex, attributesSprites[attributeIndex]);

@@ -4,42 +4,39 @@ using UnityEngine;
 
 public class EventTriggeringPhase : MonoBehaviour
 {
-    // Debugging
     private int playerIndex;
 
-    // Card definition
-    [System.Serializable]
-    public class Card
+    public StateID nextStateID;
+
+    public enum SpecialEffectType
     {
-        public string name;
-        public Attributes attb1;
-        public int value1;
-        public Attributes attb2;
-        public int value2;
+        MultiplyBy2,
+        MultiplyBy3,
+        CutInHalf,
+        Add10,
+        Subtract10,
+        Add50Percent,
+        Subtract25Percent
     }
 
-    // Predefined cards
-    public List<Card> cards = new List<Card>
+    public class SpecialEffect
     {
-        new Card { name = "Temptation", attb1 = Attributes.Lust, value1 = 10, attb2 = Attributes.Intelligence, value2 = -5 },
-        new Card { name = "Study Hard", attb1 = Attributes.Intelligence, value1 = 8, attb2 = Attributes.Fame, value2 = -3 },
-        new Card { name = "Gamble", attb1 = Attributes.Money, value1 = 15, attb2 = Attributes.Charm, value2 = -7 },
-        new Card { name = "Charity", attb1 = Attributes.Fame, value1 = 5, attb2 = Attributes.Money, value2 = -10 },
-        new Card { name = "Flirt", attb1 = Attributes.Charm, value1 = 7, attb2 = Attributes.Lust, value2 = 3 },
-    };
+        public string name;
+        public SpecialEffectType effectType;
+        public Attributes attribute;
+    }
 
-    private Card currentCard;
+    private SpecialEffect currentEffect;
     private bool phaseActive = false;
 
-    // Events for UI to subscribe to
     public event System.Action OnEnterEvent;
     public event System.Action<int> OnShowPlayerPopup;
     public event System.Action OnHidePlayerPopup;
     public event System.Action OnShowCardPickSprite;
     public event System.Action OnHideCardPickSprite;
-    public event System.Action<Card> OnShowCard;
+    public event System.Action<string> OnShowEffect; // Show effect name/description
     public event System.Action OnHideCard;
-    public event System.Action<Attributes, int, int, Attributes, int, int> OnAnimateAttributeChange;
+    public event System.Action<Attributes, int[], int[]> OnAnimateAttributeChange; // Attribute, old values, new values
     public event System.Action OnPhaseEnd;
 
     public void Init(int playerIndex)
@@ -47,11 +44,9 @@ public class EventTriggeringPhase : MonoBehaviour
         this.playerIndex = playerIndex;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void OnEnter()
     {
-        // Start the event triggering phase
-        Debug.Log($"EventTriggeringPhase: Starting for player {playerIndex}");
+        Debug.Log($"EventTriggeringPhase: Special effect phase");
         phaseActive = true;
         OnEnterEvent?.Invoke();
         StartCoroutine(PhaseFlow());
@@ -59,42 +54,86 @@ public class EventTriggeringPhase : MonoBehaviour
 
     private IEnumerator PhaseFlow()
     {
-        yield return new WaitForSeconds(0.5f); // Small delay before starting the flow
-        Debug.Log($"EventTriggeringPhase: Flow started for player {playerIndex}");
-        // 1. Show popup with player index
-        OnShowPlayerPopup?.Invoke(playerIndex);
-        yield return new WaitForSeconds(2.5f);
-        // Add a small delay before showing the card picking animation
         yield return new WaitForSeconds(0.5f);
+        OnShowPlayerPopup?.Invoke(playerIndex);
+        yield return new WaitForSeconds(1.0f);
         OnHidePlayerPopup?.Invoke();
 
-        // 2. Show animated sprite (card picking)
         OnShowCardPickSprite?.Invoke();
-        yield return new WaitForSeconds(2.0f); // Wait for animation
+        yield return new WaitForSeconds(2.5f);
         OnHideCardPickSprite?.Invoke();
 
-        // 3. Pick a random card
-        currentCard = cards[Random.Range(0, cards.Count)];
+        // 1. Pick a random attribute
+        var attributes = System.Enum.GetValues(typeof(Attributes));
+        Attributes chosenAttr = (Attributes)attributes.GetValue(Random.Range(0, attributes.Length));
 
-        // 4. Show card with animation
-        OnShowCard?.Invoke(currentCard);
+        // 2. Pick a random effect
+        SpecialEffectType[] possibleEffects = new SpecialEffectType[] {
+            SpecialEffectType.MultiplyBy2,
+            SpecialEffectType.MultiplyBy3,
+            SpecialEffectType.CutInHalf,
+            SpecialEffectType.Add10,
+            SpecialEffectType.Subtract10,
+            SpecialEffectType.Add50Percent,
+            SpecialEffectType.Subtract25Percent
+        };
+        SpecialEffectType chosenEffect = possibleEffects[Random.Range(0, possibleEffects.Length)];
+
+        string effectDesc = GetEffectDescription(chosenEffect, chosenAttr);
+        currentEffect = new SpecialEffect { name = effectDesc, effectType = chosenEffect, attribute = chosenAttr };
+
+        // 3. Show effect description
+        OnShowEffect?.Invoke(effectDesc);
         yield return new WaitForSeconds(2.0f);
 
-        // 5. Apply card effects to player data
-        var player = GameManager.Instance.Players[playerIndex];
-        int oldValue1 = player.currentAttbs[currentCard.attb1];
-        int oldValue2 = player.currentAttbs[currentCard.attb2];
-        int newValue1 = oldValue1 + currentCard.value1;
-        int newValue2 = oldValue2 + currentCard.value2;
-        player.currentAttbs[currentCard.attb1] = newValue1;
-        player.currentAttbs[currentCard.attb2] = newValue2;
+        // 4. Apply effect to all players
+        var players = GameManager.Instance.Players;
+        int[] oldVals = new int[players.Length];
+        int[] newVals = new int[players.Length];
+        for (int i = 0; i < players.Length; i++)
+        {
+            int oldVal = players[i].currentAttbs[chosenAttr];
+            int newVal = ApplyEffect(chosenEffect, oldVal);
+            oldVals[i] = oldVal;
+            newVals[i] = newVal;
+            players[i].currentAttbs[chosenAttr] = newVal;
+        }
 
-        // 6. Animate attribute changes
-        OnAnimateAttributeChange?.Invoke(currentCard.attb1, oldValue1, newValue1, currentCard.attb2, oldValue2, newValue2);
-        yield return new WaitForSeconds(1.5f + 1.0f); // match UI animation duration + wait
+        // 5. Animate attribute changes for all players
+        OnAnimateAttributeChange?.Invoke(chosenAttr, oldVals, newVals);
+        yield return new WaitForSeconds(2.5f);
     }
 
-    // Update is called once per frame
+    private int ApplyEffect(SpecialEffectType effect, int value)
+    {
+        switch (effect)
+        {
+            case SpecialEffectType.MultiplyBy2: return value * 2;
+            case SpecialEffectType.MultiplyBy3: return value * 3;
+            case SpecialEffectType.CutInHalf: return Mathf.Max(1, value / 2);
+            case SpecialEffectType.Add10: return value + 10;
+            case SpecialEffectType.Subtract10: return value - 10;
+            case SpecialEffectType.Add50Percent: return value + (value / 2);
+            case SpecialEffectType.Subtract25Percent: return value - (value / 4);
+            default: return value;
+        }
+    }
+
+    private string GetEffectDescription(SpecialEffectType effect, Attributes attr)
+    {
+        switch (effect)
+        {
+            case SpecialEffectType.MultiplyBy2: return $"Special Game Effect\n All players' {attr} is multiplied by 2!";
+            case SpecialEffectType.MultiplyBy3: return $"Special Game Effect\n All players' {attr} is multiplied by 3!";
+            case SpecialEffectType.CutInHalf: return $"Special Game Effect\n All players' {attr} is cut in half! (minimum 1)";
+            case SpecialEffectType.Add10: return $"Special Game Effect\n All players' {attr} increases by 10!";
+            case SpecialEffectType.Subtract10: return $"Special Game Effect\n All players' {attr} decreases by 10!";
+            case SpecialEffectType.Add50Percent: return $"Special Game Effect\n All players' {attr} increases by 50%!";
+            case SpecialEffectType.Subtract25Percent: return $"Special Game Effect\n All players' {attr} decreases by 25%!";
+            default: return $"Special Game Effect\n All players' {attr} is changed!";
+        }
+    }
+
     public void OnUpdate()
     {
         // ...existing code...
@@ -102,15 +141,14 @@ public class EventTriggeringPhase : MonoBehaviour
 
     public void LeaveEventTriggeringPhase()
     {
-        GameStateManager.Instance.UpdateLastState(StateID.EventTrigger);
-        GameStateManager.Instance.NextPlayer();
+        // GameStateManager.Instance.UpdateLastState(StateID.EventTrigger);
+        // GameStateManager.Instance.NextPlayer();
+        GameStateManager.Instance.SwitchState(nextStateID);
     }
 
     public void OnExit()
     {
-        // 7. Hide card
         OnHideCard?.Invoke();
-        // Disable Everything related to the event triggering phase
         OnPhaseEnd?.Invoke();
         phaseActive = false;
     }

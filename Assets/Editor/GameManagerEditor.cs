@@ -28,6 +28,8 @@ public class GameManagerEditor : Editor
                 EditorGUILayout.LabelField($"Player {i + 1}", EditorStyles.boldLabel);
                 DrawDictionary("🔹 Current Attributes", player.currentAttbs);
                 DrawDictionary("🔸 Required Attributes", player.requiredAttbs);
+                DrawDictionary("🔻 Sinking Attributes", player.sinkingAttbs);
+                DrawDictionary("💰 Bidding Attributes", player.biddingAttbs);
 
                 EditorGUILayout.EndVertical();
                 EditorGUILayout.Space();

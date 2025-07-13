@@ -1,0 +1,2532 @@
+fileFormatVersion: 2
+guid: 796acfe9dd02b9c4683f3ccb88daa623
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pick Roll_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d24ca2aa1efa4741a4be57bc9c1a06f
+      internalID: 314730378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be32c166ba3f0ad4ca15d2e9d08f741b
+      internalID: -687253899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_2
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cc29c9ad6f60446af267c9f40d0314
+      internalID: 1217698602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_3
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e206fbe0b4fb2d7409ea947e885bdc3a
+      internalID: -1969565347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_4
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e58843659c6eb249a760711becbada1
+      internalID: 2129155724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_5
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14766fd5707102b4f83e74a8e4a0d2d4
+      internalID: 1868996007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_6
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9193e92e65ad3498424f858dadec03
+      internalID: 1113289239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8e4401583cc5c42965b8155c91b6ca
+      internalID: 401632822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc7f3e87d71af64095b984321deb9c9
+      internalID: 1297028005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_9
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4901e95b6c38c4544ac8989a42ba08d2
+      internalID: -635389246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20bc395168e60848bb415d70d8f106f
+      internalID: 1793263367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_11
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1896cf9de73ff43930aad2552eb019
+      internalID: -306662413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_12
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddb345547728904e82c539cef592c51
+      internalID: -1569787415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_13
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7e9424c211b7f42b76380d6ef30aed
+      internalID: 2107329248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0a554d6568a4f468575492e73ad88f
+      internalID: 743052779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccda09db1e55a674fa31f812994c7998
+      internalID: 840453287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_16
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defb0b134aaf50f498f63d71528fb691
+      internalID: -1867844251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_17
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071d3af46b7306a4b9b85d6fb33daf12
+      internalID: 1566461034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_18
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34bc40778317f5498bfe7822ec929ee
+      internalID: -393721301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_19
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dcde4d846f7ec4cb1ba43488fc7380
+      internalID: -226197560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_20
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a09e95902b7f640b54c9d136b44544
+      internalID: 1819631990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55797dcbf1a6f9e478a31728d428df9d
+      internalID: -690689808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_22
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed95fa69e1c4914ea1527a1d272ffb4
+      internalID: -355106660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_23
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cac8d7a0b5e9d4ebf986da3d16ce3d
+      internalID: 539692264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_24
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a81048cfe9ea634cb9c3dfa8e850898
+      internalID: 1428277342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_25
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4da310621289845b8a5f42d01c9fe5
+      internalID: 2007889043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_26
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a4bd6ea56db5d4c97c705a3a6276a5
+      internalID: -1929278459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_27
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ef2b9916da669469c741392b5332af
+      internalID: -1965847191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911079031b7b2c54ba5b896fd6653dee
+      internalID: 2044785390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_29
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cedc8bd7745aa42a8e139024ad7d24
+      internalID: 45270465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_30
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c80507204a9eae40ae1f961c788e8ca
+      internalID: -178288420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_31
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338ee8e3aa2a2c748a0d27809f8f6d24
+      internalID: 1745066116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_32
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e7dd0adbdd34544a75b98846193d03
+      internalID: -1496214989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_33
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d4e19d09fadb043ad3803b70abaa4c
+      internalID: -971861626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_34
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d733482cdeec84192f4b621936c508
+      internalID: 1952039683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6669d3e8f8d0308478eedbbe6311dbdd
+      internalID: 503605268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_36
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a967376cbcd3ce4f854c21441d16c18
+      internalID: 2078085054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_37
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2ecb275b5d4f84ebd4cd6f80906132
+      internalID: -902528371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_38
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de86053e6c1df3a42840cfef649206b7
+      internalID: -1033268021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_39
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a6449cd927b4f4fba88b84f1c99bac
+      internalID: 2115226320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_40
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8865b08a4b08246b2dd6d39b88b3ec
+      internalID: -2013637627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_41
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fe940b12534fa449e9180778fe126e
+      internalID: -743536352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8399aa04eaa5ea946adbd4856b2c5039
+      internalID: -164696882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_43
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a4cad7671141847a9512ecccc78ee0
+      internalID: -119654113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_44
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5f285f23e042f4fb070f0f478c78ef
+      internalID: -496569488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_45
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13570e0b1c9b414bb35144e28adf753
+      internalID: 797975989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_46
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ceae6b9f73d0f64da812bffce095ed5
+      internalID: -1153454455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_47
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0db19c59adb74c40bcdda1a812f0cac
+      internalID: 813857374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_48
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e285be9bbd7d84b8cba8f8b83bfdcb
+      internalID: -935002656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb194684d76099646bd5104ceabdd22a
+      internalID: 1912900498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_50
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a92d36b6cf6cfc49a0898c57e4bbc7f
+      internalID: 78439017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_51
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd07caa2b77d64468e3f7e49a0dbfcd
+      internalID: 251422026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_52
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c7c39083802e64480c69f9da9709ec
+      internalID: -1943782552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_53
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d98966bfb469646a49c2c7b7454747
+      internalID: -249439182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_54
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2b85625f448cc4b8e5fc77bdf1cd03
+      internalID: -280122482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_55
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753d4b5fd0761044aa6228bde1b5f6ba
+      internalID: 229133610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45eb445725c6cff4f9dc04605c035d6b
+      internalID: -478881848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_57
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69804c9fe725bb349bd496680a856f2f
+      internalID: 2057138213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_58
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1cd6bed8c9f2a4ca9839daf10b2536
+      internalID: -804722275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_59
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b2d4ee9937a6540984694744ed8782
+      internalID: 541597960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_60
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b15b7d4d21ad84285e3af93459486c
+      internalID: -1431764079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_61
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782fb02faf1d92d4a97cf3576b5e5086
+      internalID: 1735378173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_62
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b172d23ce07a4264390bc9e93bf6c943
+      internalID: 788501637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2ae40c7dba8934c9c1f9b4856778ac
+      internalID: -226758821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_64
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3caa9fc1840254a944addf754f6e20
+      internalID: 676610802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_65
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b792519964f13d745b863c09fed2f984
+      internalID: 14790847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_66
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999e9d00b7903b24290a6231efca682d
+      internalID: 1222702810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_67
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7503021e65fed488e3a128e8943f1a
+      internalID: 1635095171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_68
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2800aaaaaf09dc8439f1c45d49664f5e
+      internalID: -599136573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_69
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac47e24d4177eca4e99a950fc3769d42
+      internalID: 337606908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d504aee05557746af7932c99e34375
+      internalID: 1014559506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_71
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e1d8d4a970ed748a31961537112a15
+      internalID: -999755653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_72
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f312750b0db279479826700d8797034
+      internalID: -1525206362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_73
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c71c446f6d9ca41860af71be84891e
+      internalID: -136157050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_74
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2d25b98999f0940b64ce06a298eaf1
+      internalID: -1428649155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_75
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42aa83b0f3668a04fb7c6ba1cd4b7804
+      internalID: 1545866828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_76
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668d43c2b383cf64193af047a9c366a7
+      internalID: -256840294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4f461409efc924081c7faa9fd095b8
+      internalID: -1801754661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_78
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b856ec31e5124ef44ad4722c26108479
+      internalID: -187935865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_79
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaa5e668670514458f536c9fb3c6d94
+      internalID: 1877437145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_80
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8bb9ee4f5f761429513d0b930af61b
+      internalID: -265280842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_81
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead3e9438ffdd78469983e31b470c0eb
+      internalID: 140627339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_82
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c666459cf75b7cb45af2194fff9a62f6
+      internalID: -1234666523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_83
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5353e7310c694498aa5532a4dfa5da
+      internalID: -442077179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea5ad44f49839c49b2f58794b6a4864
+      internalID: -201114128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_85
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89d2a694fcf3b1409a00ab59a1d3ee5
+      internalID: -1579028804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_86
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7668dfba56a004d88f206f9a5fe924
+      internalID: -402672732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_87
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c5b350babfdcb41a16d9b8bd2d1cc4
+      internalID: 1963939064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_88
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d765e34c42e36ca45a82272b345b282c
+      internalID: -670414193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_89
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f15c35170213243a39e509ae5bba13
+      internalID: -1303414521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_90
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57b01d2e4340e0449fb014a925459b7
+      internalID: 1778184511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ec28d1826ad00468475ba755f6a338
+      internalID: 302934897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_92
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ff1b8ed4dd6744aad6d3c838accceb
+      internalID: -321835957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_93
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3962341ed58084884afb4e16d59906
+      internalID: -216044013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_94
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9526eb3606ca3dc4dbc4fa7408f3fa43
+      internalID: 1275120876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_95
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fef37dd4ec427549b80fc03c7704592
+      internalID: -688530151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_96
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b468a9e9a90fe14f8ed27f91bd4eec7
+      internalID: -2069974689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_97
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cf87dd025bfd04c8656e861ab96e5f
+      internalID: 1796233925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced00745b7f153645bd15f2b7fc3f65e
+      internalID: 1540467937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_99
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05049409e3777a4b9c12c0f75638527
+      internalID: -220255819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_100
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9100a7f00ff3f6945ab39e8bec39139e
+      internalID: 1150005834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_101
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641b61e04fc9c46449c82240e1c8d22d
+      internalID: -1867401360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_102
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be42b4af1fb1da5469907d18f81a8ddb
+      internalID: -1713538593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_103
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbafe25b420350418f55aa558577244
+      internalID: 126217676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pick Roll_104
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c51e2648b6fbce42afc66bdb8253ce1
+      internalID: -270651722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 89540c9e16c63df45a721a65ca710f97
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pick Roll_0: 314730378
+      Pick Roll_1: -687253899
+      Pick Roll_10: 1793263367
+      Pick Roll_100: 1150005834
+      Pick Roll_101: -1867401360
+      Pick Roll_102: -1713538593
+      Pick Roll_103: 126217676
+      Pick Roll_104: -270651722
+      Pick Roll_11: -306662413
+      Pick Roll_12: -1569787415
+      Pick Roll_13: 2107329248
+      Pick Roll_14: 743052779
+      Pick Roll_15: 840453287
+      Pick Roll_16: -1867844251
+      Pick Roll_17: 1566461034
+      Pick Roll_18: -393721301
+      Pick Roll_19: -226197560
+      Pick Roll_2: 1217698602
+      Pick Roll_20: 1819631990
+      Pick Roll_21: -690689808
+      Pick Roll_22: -355106660
+      Pick Roll_23: 539692264
+      Pick Roll_24: 1428277342
+      Pick Roll_25: 2007889043
+      Pick Roll_26: -1929278459
+      Pick Roll_27: -1965847191
+      Pick Roll_28: 2044785390
+      Pick Roll_29: 45270465
+      Pick Roll_3: -1969565347
+      Pick Roll_30: -178288420
+      Pick Roll_31: 1745066116
+      Pick Roll_32: -1496214989
+      Pick Roll_33: -971861626
+      Pick Roll_34: 1952039683
+      Pick Roll_35: 503605268
+      Pick Roll_36: 2078085054
+      Pick Roll_37: -902528371
+      Pick Roll_38: -1033268021
+      Pick Roll_39: 2115226320
+      Pick Roll_4: 2129155724
+      Pick Roll_40: -2013637627
+      Pick Roll_41: -743536352
+      Pick Roll_42: -164696882
+      Pick Roll_43: -119654113
+      Pick Roll_44: -496569488
+      Pick Roll_45: 797975989
+      Pick Roll_46: -1153454455
+      Pick Roll_47: 813857374
+      Pick Roll_48: -935002656
+      Pick Roll_49: 1912900498
+      Pick Roll_5: 1868996007
+      Pick Roll_50: 78439017
+      Pick Roll_51: 251422026
+      Pick Roll_52: -1943782552
+      Pick Roll_53: -249439182
+      Pick Roll_54: -280122482
+      Pick Roll_55: 229133610
+      Pick Roll_56: -478881848
+      Pick Roll_57: 2057138213
+      Pick Roll_58: -804722275
+      Pick Roll_59: 541597960
+      Pick Roll_6: 1113289239
+      Pick Roll_60: -1431764079
+      Pick Roll_61: 1735378173
+      Pick Roll_62: 788501637
+      Pick Roll_63: -226758821
+      Pick Roll_64: 676610802
+      Pick Roll_65: 14790847
+      Pick Roll_66: 1222702810
+      Pick Roll_67: 1635095171
+      Pick Roll_68: -599136573
+      Pick Roll_69: 337606908
+      Pick Roll_7: 401632822
+      Pick Roll_70: 1014559506
+      Pick Roll_71: -999755653
+      Pick Roll_72: -1525206362
+      Pick Roll_73: -136157050
+      Pick Roll_74: -1428649155
+      Pick Roll_75: 1545866828
+      Pick Roll_76: -256840294
+      Pick Roll_77: -1801754661
+      Pick Roll_78: -187935865
+      Pick Roll_79: 1877437145
+      Pick Roll_8: 1297028005
+      Pick Roll_80: -265280842
+      Pick Roll_81: 140627339
+      Pick Roll_82: -1234666523
+      Pick Roll_83: -442077179
+      Pick Roll_84: -201114128
+      Pick Roll_85: -1579028804
+      Pick Roll_86: -402672732
+      Pick Roll_87: 1963939064
+      Pick Roll_88: -670414193
+      Pick Roll_89: -1303414521
+      Pick Roll_9: -635389246
+      Pick Roll_90: 1778184511
+      Pick Roll_91: 302934897
+      Pick Roll_92: -321835957
+      Pick Roll_93: -216044013
+      Pick Roll_94: 1275120876
+      Pick Roll_95: -688530151
+      Pick Roll_96: -2069974689
+      Pick Roll_97: 1796233925
+      Pick Roll_98: 1540467937
+      Pick Roll_99: -220255819
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

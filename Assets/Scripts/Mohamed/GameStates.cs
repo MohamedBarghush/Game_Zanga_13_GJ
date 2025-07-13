@@ -42,12 +42,17 @@ public class PassPhonePhase : GameState {
 public class BargainingPhase : GameState {
 
     private int playerIndex;
-    public BargainingPhase(int playerIndex)
+    private BargainingPhaseController bargainingPhaseController;
+    public BargainingPhase(int playerIndex, BargainingPhaseController bargainingPhaseController)
     {
         this.playerIndex = playerIndex;
+        this.bargainingPhaseController = bargainingPhaseController;
     }
 
-    public override void OnEnter() => Debug.Log("Entering Bargaining Phase");
+    public override void OnEnter() {
+        bargainingPhaseController.Init(playerIndex);
+        bargainingPhaseController.OnPhaseEnter(); 
+    }
     public override void OnUpdate() => Debug.Log("Updating Bargaining Phase");
     public override void OnExit() => Debug.Log("Exiting Bargaining Phase");
 }
