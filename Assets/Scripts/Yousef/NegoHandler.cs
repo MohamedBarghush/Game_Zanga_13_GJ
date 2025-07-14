@@ -252,6 +252,12 @@ public class NegoHandler : MonoBehaviour
     // Added UpdateLockedIdxTexts to ensure UI reflects changes
     public void OnReBet () {
         lockedBids.Clear();
+        negotiationCanvas.SetActive(false);
+        foreach (var player in GameManager.Instance.Players)
+        {
+            // Reset bidding attributes for all players
+            player.biddingAttbs.Clear();
+        }
         UpdateLockedIdxTexts(); // Ensure lockedIdx is cleared
         GameStateManager.Instance.UpdateLastState(StateID.Bargaining);
         GameStateManager.Instance.SwitchState(StateID.PassPhone);

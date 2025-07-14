@@ -141,7 +141,7 @@ public class EventTriggeringPhase : MonoBehaviour
     {
         // GameStateManager.Instance.UpdateLastState(StateID.EventTrigger);
         // GameStateManager.Instance.NextPlayer();
-        GameStateManager.Instance.SwitchState(nextStateID);
+        GameStateManager.Instance.SwitchState(StateID.ConditionCheck);
     }
 
     public void OnExit()

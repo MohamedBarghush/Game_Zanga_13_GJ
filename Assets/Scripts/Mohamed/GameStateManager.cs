@@ -16,6 +16,9 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] PassingPhonePhase passingPhonePhase;
     [SerializeField] BargainingPhaseController bargainingPhaseController;
     [SerializeField] NegoHandler negotiationPhase;
+    [SerializeField] EnterNameController enterNameController;
+    [SerializeField] IntroHandler introHandler;
+    [SerializeField] EndStateHandler endStateHandler;
 
     void Awake()
     {
@@ -25,32 +28,32 @@ public class GameStateManager : MonoBehaviour
     void Start()
     {
         _playerIndex = 0;
-        // SwitchState(StateID.Start);
-        SwitchState(StateID.PassPhone);
+        SwitchState(StateID.Start);
+        // SwitchState(StateID.PassPhone);
     }
 
     void Update()
     {
         _currentState?.OnUpdate();
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            // Example of switching state manually for testing
-            UpdateLastState(StateID.EventTrigger);
-            SwitchState(StateID.EventTrigger);
-        }
+        // if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     // Example of switching state manually for testing
+        //     UpdateLastState(StateID.EventTrigger);
+        //     SwitchState(StateID.EventTrigger);
+        // }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            // Example of switching state manually for testing
-            UpdateLastState(StateID.Bargaining);
-            SwitchState(StateID.PassPhone);
-        }
+        // if (Input.GetKeyDown(KeyCode.W))
+        // {
+        //     // Example of switching state manually for testing
+        //     UpdateLastState(StateID.Bargaining);
+        //     SwitchState(StateID.PassPhone);
+        // }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SwitchState(StateID.Negotiation);
-        }
+        // if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     SwitchState(StateID.Negotiation);
+        // }
     }
 
     public void SwitchState(StateID newID)
@@ -76,12 +79,13 @@ public class GameStateManager : MonoBehaviour
     {
         return id switch
         {
-            StateID.Start => new StartPhase(),
+            StateID.Start => new StartPhase(introHandler),
+            StateID.EnterName => new EnterNamePhase(_playerIndex, enterNameController),
             StateID.PassPhone => new PassPhonePhase(_playerIndex, passingPhonePhase),
             StateID.Bargaining => new BargainingPhase(_playerIndex, bargainingPhaseController),
             StateID.EventTrigger => new EventTriggerPhase(_playerIndex, eventTriggeringPhase),
             StateID.Negotiation => new NegotiationPhase(negotiationPhase),
-            StateID.ConditionCheck => new ConditionCheckPhase(_playerIndex),
+            StateID.ConditionCheck => new ConditionCheckPhase(endStateHandler),
             StateID.UpdateGame => new UpdateGamePhase(),
             _ => null
         };

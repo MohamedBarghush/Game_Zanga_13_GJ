@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 public class EndStateHandler : MonoBehaviour
 {
-    private GameManager gameManager;
     [SerializeField] private Button nextStep;
     [SerializeField] private Button endGame;
     [SerializeField] private TMP_Text winnersText;
+    [SerializeField] private GameObject entireCanvas;
 
-    private void Start()
+    public void OnEnter()
     {
-        gameManager = GameManager.Instance;
+        entireCanvas.SetActive(true);
         List<PlayerData> winners = new List<PlayerData>();
 
-        foreach (PlayerData playerData in gameManager.Players)
+        foreach (PlayerData playerData in GameManager.Instance.Players)
         {
             var currAttbs = playerData.currentAttbs;
             var reqAttbs = playerData.requiredAttbs;
@@ -73,11 +73,20 @@ public class EndStateHandler : MonoBehaviour
 
     public void onContinuePress()
     {
-        GameStateManager.Instance.SwitchState(StateID.Bargaining);
+        GameStateManager.Instance._playerIndex = 0; // Reset to 0 if player index exceeds max players;
+        GameStateManager.Instance.UpdateLastState(StateID.Bargaining);
+        GameStateManager.Instance.SetNextStateID(StateID.Bargaining);
+        GameStateManager.Instance.SwitchState(StateID.PassPhone);
     }
 
     public void onEndGamePress()
     {
+        GameStateManager.Instance._playerIndex = 0; // Reset to 0 if player index exceeds max players;
         GameStateManager.Instance.SwitchState(StateID.Start);
+    }
+
+    public void OnExit()
+    {
+        entireCanvas.SetActive(false);
     }
 }
