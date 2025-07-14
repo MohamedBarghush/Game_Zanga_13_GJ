@@ -4,7 +4,6 @@ using System;
 public class PassingPhonePhase : MonoBehaviour
 {
     private int playerIndex;
-    public StateID nextPhase;
 
     // Events for UI
     public event Action<int> OnShowPassText;
@@ -31,7 +30,7 @@ public class PassingPhonePhase : MonoBehaviour
         {
             // Debug.LogError("Player index is " + playerIndex + ", which exceeds the maximum number of players: " + maxPlayers);
             GameStateManager.Instance._playerIndex = 0; // Reset to 0 if player index exceeds max players;
-            GameStateManager.Instance.SwitchState(nextPhase);
+            GameStateManager.Instance.SwitchState(GameStateManager.Instance.GetNextStateID());
             return;
         }
 
@@ -47,7 +46,7 @@ public class PassingPhonePhase : MonoBehaviour
 
         if (playerIndex >= GameStateManager.Instance.GetMaxPlayers())
         {
-            GameStateManager.Instance.SwitchState(nextPhase);
+            GameStateManager.Instance.SwitchState(GameStateManager.Instance.GetNextStateID());
         }
         else
         {

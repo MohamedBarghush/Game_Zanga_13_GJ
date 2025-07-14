@@ -42,7 +42,7 @@ public class PlayerData {
 }
 
 
-public enum Attributes { Fame, Charm, Money, Intelligence, Health }
+public enum Attributes { Fame, Money, Intelligence }
 
 public class GameManager : MonoBehaviour
 {
@@ -60,12 +60,12 @@ public class GameManager : MonoBehaviour
         Players = new PlayerData[4];
         for (int i = 0; i < Players.Length; i++)
             Players[i] = new PlayerData(
-                new int[] { 0, 60, 70, 30, 0 },
-                new int[] { 0, 80, 50, 0, 0 },
-                new int[] { 0, 0, 0, 0, 20 },
-                new int[] { 0, 0, 0, 0, 0 },
-                "tstFake",
-                "tstReal"
+                new int[] { 30, 30, 30 },
+                new int[] { 80, 80, 0 },
+                new int[] { 0, 0, 10 },
+                new int[] { 0, 0, 0 },
+                "tstFake" + i,
+                "tstReal" + i
             );
     }
 
@@ -86,6 +86,46 @@ public class GameManager : MonoBehaviour
             Players[playerIndex].biddingAttbs = new Dictionary<Attributes, int>();
 
         Players[playerIndex].biddingAttbs[attribute] = value;
+    }
+
+    public void SetPlayerPublicName(string name, int playerIndex)
+    {
+        if (playerIndex < 0 || playerIndex >= Players.Length)
+            throw new ArgumentOutOfRangeException(nameof(playerIndex), "Invalid player index");
+
+        Players[playerIndex].playerName = name;
+    }
+
+    public void SetPlayerPrivateName(string name, int playerIndex)
+    {
+        if (playerIndex < 0 || playerIndex >= Players.Length)
+            throw new ArgumentOutOfRangeException(nameof(playerIndex), "Invalid player index");
+
+        Players[playerIndex].privateName = name;
+    }
+
+    public void SetPlayerRequiredAttributes(int[] required, int playerIndex)
+    {
+        if (playerIndex < 0 || playerIndex >= Players.Length)
+            throw new ArgumentOutOfRangeException(nameof(playerIndex), "Invalid player index");
+        if (Players[playerIndex].requiredAttbs == null)
+            Players[playerIndex].requiredAttbs = new Dictionary<Attributes, int>();
+        for (int i = 0; i < 3; i++)
+        {
+            Players[playerIndex].requiredAttbs[(Attributes)i] = required[i];
+        }
+    }
+
+    public void SetPlayerSinkingAttributes(int[] sinking, int playerIndex)
+    {
+        if (playerIndex < 0 || playerIndex >= Players.Length)
+            throw new ArgumentOutOfRangeException(nameof(playerIndex), "Invalid player index");
+        if (Players[playerIndex].sinkingAttbs == null)
+            Players[playerIndex].sinkingAttbs = new Dictionary<Attributes, int>();
+        for (int i = 0; i < 3; i++)
+        {
+            Players[playerIndex].sinkingAttbs[(Attributes)i] = sinking[i];
+        }
     }
 
     void Start()

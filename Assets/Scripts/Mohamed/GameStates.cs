@@ -12,9 +12,33 @@ public abstract class GameState
 }
 
 public class StartPhase : GameState{
-    public override void OnEnter() => Debug.Log("Entering Start Phase");
+    private IntroHandler introHandler;
+
+    public StartPhase(IntroHandler introHandler)
+    {
+        this.introHandler = introHandler;
+    }
+    public override void OnEnter() => introHandler.OnPhaseEnter();
     //public override void OnUpdate() => Consoe.Log("Updating Start Phase");
     public override void OnExit() => Debug.Log("Exiting Start Phase");
+}
+
+public class EnterNamePhase : GameState {
+    private int playerIndex;
+    private EnterNameController enterNameController;
+
+    public EnterNamePhase(int playerIndex, EnterNameController enterNameController)
+    {
+        this.playerIndex = playerIndex;
+        this.enterNameController = enterNameController;
+    }
+
+    public override void OnEnter() {
+        enterNameController.Init(playerIndex);
+        enterNameController.OnEnter();
+    }
+    public override void OnUpdate() => Debug.Log("Updating Enter Name Phase");
+    public override void OnExit() => Debug.Log("Exiting Enter Name Phase");
 }
 
 public class PassPhonePhase : GameState {
@@ -74,22 +98,31 @@ public class EventTriggerPhase : GameState {
 }
 
 public class NegotiationPhase : GameState {
-    public override void OnEnter() => Debug.Log("Entering Negotiation Phase");
+    private NegoHandler negotiationPhase;
+    public NegotiationPhase(NegoHandler negotiationPhase)
+    {
+        this.negotiationPhase = negotiationPhase;
+    }
+
+    public override void OnEnter() => negotiationPhase.OnEnter();
     public override void OnUpdate() => Debug.Log("Updating Negotiation Phase");
     public override void OnExit() => Debug.Log("Exiting Negotiation Phase");
 }
 
 public class ConditionCheckPhase : GameState {
-    private int playerIndex;
+    private EndStateHandler endStateHandler;
 
-    public ConditionCheckPhase(int playerIndex)
+    public ConditionCheckPhase(EndStateHandler endStateHandler)
     {
-        this.playerIndex = playerIndex;
+        this.endStateHandler = endStateHandler;
     }
 
-    public override void OnEnter() => Debug.Log("Entering Condition Check Phase");
+    public override void OnEnter() {
+        endStateHandler.OnEnter();
+        Debug.Log("Entering Condition Check Phase");
+    }
     public override void OnUpdate() => Debug.Log("Updating Condition Check Phase");
-    public override void OnExit() => Debug.Log("Exiting Condition Check Phase");
+    public override void OnExit() => endStateHandler.OnExit();
 }
 
 public class UpdateGamePhase : GameState {

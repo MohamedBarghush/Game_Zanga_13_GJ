@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -96,6 +97,7 @@ public class BargainingPhaseController : MonoBehaviour
     public void OnNextPlayerPress()
     {
         GameStateManager.Instance.UpdateLastState(StateID.Bargaining);
+        GameStateManager.Instance.SetNextStateID(StateID.Negotiation);
         GameStateManager.Instance.NextPlayer();
         DisableEverything();
     }

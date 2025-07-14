@@ -15,6 +15,8 @@ public class TradeHandler : MonoBehaviour
     Dictionary<string, Dictionary<int, int>> playerValues;
     GameManager gameManager;
     PlayerData playerData;
+    private static int currentAttb;
+
     void Start()
     {
         playerValues = new Dictionary<string, Dictionary<int, int>>();
@@ -31,11 +33,9 @@ public class TradeHandler : MonoBehaviour
         
     }
 
-    int currentAttb = 0;
-
     public void OpenTradeUI(int attributeIndex, Sprite sprite)
     {
-        currentAttb = attributeIndex; 
+        currentAttb = attributeIndex;
         tradeParent.SetActive(true);
         target.sprite = sprite;
         parent.SetActive(false);
@@ -48,7 +48,7 @@ public class TradeHandler : MonoBehaviour
         // Update the biddingAttbs for the current player in GameManager
         int playerIndex = GameStateManager.Instance.GetCurrentPlayerIndex();
         int value = int.Parse(valueText.text);
-        if (value != 0)
+        if (value >= 0)
         {
             // Set or update the bidding attribute for this player
             gameManager.SetPlayerBiddingAttribute(playerIndex, (Attributes)currentAttb, value);
@@ -76,6 +76,7 @@ public class TradeHandler : MonoBehaviour
     }
     public void onMinusButtonPress()
     {
+        if (valueText.text == "0") return;
         valueText.text = ((int.Parse(valueText.text)) - 1).ToString();
     }
 }

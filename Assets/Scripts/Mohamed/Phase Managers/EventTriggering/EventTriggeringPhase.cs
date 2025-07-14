@@ -27,7 +27,6 @@ public class EventTriggeringPhase : MonoBehaviour
     }
 
     private SpecialEffect currentEffect;
-    private bool phaseActive = false;
 
     public event System.Action OnEnterEvent;
     public event System.Action<int> OnShowPlayerPopup;
@@ -47,7 +46,6 @@ public class EventTriggeringPhase : MonoBehaviour
     public void OnEnter()
     {
         Debug.Log($"EventTriggeringPhase: Special effect phase");
-        phaseActive = true;
         OnEnterEvent?.Invoke();
         StartCoroutine(PhaseFlow());
     }
@@ -143,13 +141,12 @@ public class EventTriggeringPhase : MonoBehaviour
     {
         // GameStateManager.Instance.UpdateLastState(StateID.EventTrigger);
         // GameStateManager.Instance.NextPlayer();
-        GameStateManager.Instance.SwitchState(nextStateID);
+        GameStateManager.Instance.SwitchState(StateID.ConditionCheck);
     }
 
     public void OnExit()
     {
         OnHideCard?.Invoke();
         OnPhaseEnd?.Invoke();
-        phaseActive = false;
     }
 }
